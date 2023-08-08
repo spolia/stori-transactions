@@ -23,5 +23,4 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`alias`, `first_name`, `last_name`, `email`, `password`)
 VALUES ('jdoe', 'John', 'Doe', 'john.doe@example.com', 'password1'),
-  ('jsmith', 'Jane', 'Smith', 'jane.smith@example.com', 'password2'),
-  ('spolia', 'Sayi', 'Polia', 'oicoriyas@gmail.com', 'password3');
+  ('jsmith', 'Jane', 'Smith', 'jane.smith@example.com', 'password2');

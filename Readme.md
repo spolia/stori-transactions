@@ -10,7 +10,7 @@ transactions grouped by month, and the average credit and average debit amounts 
 
 ## App structure
 
-This application was developed in `golang` , `gorilla/mux` , `package oriented design` as project structure and `mysql` as database.
+This application was developed in `golang` , `gorilla/mux` ,`gomail` pkg for smtp, `package oriented design` as project structure and `mysql` as database.
 
 The project is composed of two main components:
 
