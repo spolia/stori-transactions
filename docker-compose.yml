@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  db:
+    container_name: test_db
+    image: test_db
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    networks:
+      - default
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: test
+      MYSQL_USER: tester
+      MYSQL_PASSWORD: secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+  api:
+    container_name: test_api
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    volumes:
+      - .:/app/
+networks:
+  default:
+volumes:
+  mysql_data:
+
